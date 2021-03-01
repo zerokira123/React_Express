@@ -10,6 +10,11 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+// Create a React element
+const element = <button>Hello, world!</button>
+
+// Render it into the DOM
+ReactDOM.render(element, document.querySelector('#pp'))
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
