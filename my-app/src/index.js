@@ -11,10 +11,20 @@ ReactDOM.render(
   document.getElementById('root')
 );
 // Create a React element
-const element = <button>Hello, world!</button>
+class MyComponent extends React.Component {
+  render() {
+    return (
+      <div style={{ padding: '30px', backgroundColor: 'lightblue' }}>
+        <button>{this.props.text}</button>
+      </div>
+    )
+  }
+}
+
+const myElement = <MyComponent text="Hello, world!" />
 
 // Render it into the DOM
-ReactDOM.render(element, document.querySelector('#pp'))
+ReactDOM.render(myElement, document.querySelector('#pp'))
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
